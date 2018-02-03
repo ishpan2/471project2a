@@ -27,6 +27,7 @@ public:
 
 	// Contains vertex information for OpenGL
 	GLuint VertexArrayID;
+    GLuint VertexArrayIDtwo;
 
 	// Data necessary to give our triangle to OpenGL
 	GLuint VertexBufferID;
@@ -38,6 +39,16 @@ public:
 			glfwSetWindowShouldClose(window, GL_TRUE);
 		}
 	}
+    float p2wX(int xp) {
+        int width, height;
+        glfwGetFramebufferSize(windowManager->getHandle(), &width, &height);
+        return ((xp-((float)width)/(float)4)/(((float)width)/4)) *((float)width/(float)height);
+    }
+    float p2wY(int yp) {
+        int width, height;
+        glfwGetFramebufferSize(windowManager->getHandle(), &width, &height);
+        return -1*(yp-((float)height)/(float)4)/(((float)height)/4);
+    }
 
 	// callback for the mouse when clicked move the triangle when helper functions
 	// written
@@ -52,8 +63,10 @@ public:
 
 			//change this to be the points converted to WORLD
 			//THIS IS BROKEN< YOU GET TO FIX IT - yay!
-			newPt[0] = 0;
-			newPt[1] = 0;
+            
+            
+			newPt[0] = p2wX(posX);
+			newPt[1] = p2wY(posY);
 
 			std::cout << "converted:" << newPt[0] << " " << newPt[1] << std::endl;
 			glBindBuffer(GL_ARRAY_BUFFER, VertexBufferID);
@@ -75,6 +88,8 @@ public:
 	/*Note that any gl calls must always happen after a GL state is initialized */
 	void initGeom()
 	{
+        GLuint colorbuffer;
+
 		//generate the VAO
 		glGenVertexArrays(1, &VertexArrayID);
 		glBindVertexArray(VertexArrayID);
@@ -84,21 +99,59 @@ public:
 		//set the current state to focus on our vertex buffer
 		glBindBuffer(GL_ARRAY_BUFFER, VertexBufferID);
 
-		static const GLfloat g_vertex_buffer_data[] =
-		{
-			-0.5f, -0.5f, 0.0f,
-			0.5f, -0.5f, 0.0f,
-			0.0f, 0.7f, 0.0f
-		};
-		//actually memcopy the data - only do this once
-		glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_DYNAMIC_DRAW);
-
-		//we need to set up the vertex array
-		glEnableVertexAttribArray(0);
-		//key function to get up how many elements to pull out at a time (3)
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*) 0);
-
-		glBindVertexArray(0);
+        GLfloat div = 240;
+        static GLfloat g_vertex_buffer_data[720];
+        GLfloat x;
+        GLfloat y;
+        
+        for (int i = 0; i < 240; i++) {
+            if (i % 3 == 0) {
+                x = cos((i) * 2 * M_PI / div);
+                y = sin((i) * 2 * M_PI / div);
+                if (i == 0) {
+                    g_vertex_buffer_data[i * 3] = x;
+                    g_vertex_buffer_data[i * 3 + 1] = y;
+                    g_vertex_buffer_data[i * 3 + 2] = 0.0f;
+                }
+                else {
+                    //get the shared vertex. -6 -5 gets you right pos
+                    g_vertex_buffer_data[i * 3] = g_vertex_buffer_data[i * 3 - 6];
+                    g_vertex_buffer_data[i * 3 + 1] = g_vertex_buffer_data[i * 3 - 5];
+                    g_vertex_buffer_data[i * 3 + 2] = 0.0f;
+                }
+            }
+            else if (i % 3 == 1) {
+                x = cos((i + 2) * 2 * M_PI / div);
+                y = sin((i + 2) * 2 * M_PI / div);
+            }
+            else {
+                x=0.0f;
+                y=0.0f;
+            }
+            g_vertex_buffer_data[i * 3] = x;
+            g_vertex_buffer_data[i * 3 + 1] = y;
+            g_vertex_buffer_data[i * 3 + 2] = 0.0f;
+            
+        }
+        glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_DYNAMIC_DRAW);
+        
+        //we need to set up the vertex array
+        glEnableVertexAttribArray(0);
+        //key function to get up how many elements to pull out at a time (3)
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*) 0);
+        
+        //VertexArrayIDtwo
+        //generate the VAO
+        glGenVertexArrays(1, &VertexArrayIDtwo);
+        glBindVertexArray(VertexArrayIDtwo);
+        //actually memcopy the data - only do this once
+        
+        //we need to set up the vertex array
+        glEnableVertexAttribArray(0);
+        //key function to get up how many elements to pull out at a time (3)
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+        
+        glBindVertexArray(0);
 
 	}
 
@@ -108,7 +161,7 @@ public:
 		GLSL::checkVersion();
 
 		// Set background color.
-		glClearColor(0.9f, 0.2f, 0.0f, 1.0f);
+		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 		// Enable z-buffer test.
 		glEnable(GL_DEPTH_TEST);
 
@@ -119,6 +172,9 @@ public:
 		prog->init();
 		prog->addUniform("P");
 		prog->addUniform("MV");
+        prog->addUniform("WINDOWHEIGHT");
+        prog->addUniform("WINDOWWIDTH");
+        prog->addUniform("time");
 		prog->addAttribute("vertPos");
 	}
 
@@ -138,7 +194,7 @@ public:
 
 		// Clear framebuffer.
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
+        GLfloat curTime = glfwGetTime();
 		// Create the matrix stacks - please leave these alone for now
 		auto P = std::make_shared<MatrixStack>();
 		auto MV = std::make_shared<MatrixStack>();
@@ -160,19 +216,26 @@ public:
 		//send the matrices to the shaders
 		glUniformMatrix4fv(prog->getUniform("P"), 1, GL_FALSE, glm::value_ptr(P->topMatrix()));
 		glUniformMatrix4fv(prog->getUniform("MV"), 1, GL_FALSE, glm::value_ptr(MV->topMatrix()));
+        glUniform1i(prog->getUniform("WINDOWHEIGHT"), height);
+        glUniform1i(prog->getUniform("WINDOWWIDTH"), width);
+        glUniform1f(prog->getUniform("time"), curTime);
 
 		glBindVertexArray(VertexArrayID);
+        
 
 		//actually draw from vertex 0, 3 vertices
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawArrays(GL_TRIANGLES, 0, 240);
 
 		glBindVertexArray(0);
+        glBindVertexArray(VertexArrayIDtwo);
+
 
 		prog->unbind();
 
 		// Pop matrix stacks.
 		MV->popMatrix();
 		P->popMatrix();
+        
 	}
 
 };

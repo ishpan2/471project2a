@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		7937DB6F09154B64B763731A /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3469608CEB3A4C2C8DA6F782 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				EC59BD589DA34105B70A6784 /* CMake Rules */,
+			);
+			dependencies = (
+				96131005412141A19A901AC9 /* PBXTargetDependency */,
+				643A5CEB65FC4F2DADCAD650 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		ABD0B7004CA44197A37A473A /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DAA6DAED73E54677A068FBB1 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				729904FA51E34896B7AEAE30 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0E3645B261544682BF3C4683 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/src/glad.c */ = {isa = PBXBuildFile; fileRef = DA3F569055384F09A10EFC98 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/src/glad.c */; };
+		1257441DBEE54490A7618102 /* /Users/ip/Documents/cs471/lab3/lab03/src/GLSL.h */ = {isa = PBXBuildFile; fileRef = 9F7F39AB2CA040AC980C1E5F /* /Users/ip/Documents/cs471/lab3/lab03/src/GLSL.h */; };
+		125EC4B8381E44F8852B740C /* /Users/ip/Documents/cs471/lab3/lab03/src/GLSL.cpp */ = {isa = PBXBuildFile; fileRef = FD1B16FF1047438497578174 /* /Users/ip/Documents/cs471/lab3/lab03/src/GLSL.cpp */; };
+		1B9AFD0EE2224A7FAB22DA12 /* /Users/ip/Documents/cs471/lab3/lab03/resources/simple_frag33.glsl */ = {isa = PBXBuildFile; fileRef = A30C80269F264689BB887E56 /* /Users/ip/Documents/cs471/lab3/lab03/resources/simple_frag33.glsl */; };
+		22B0A27F6C544EE2AC8C30B8 /* /Users/ip/Documents/cs471/lab3/lab03/src/Program.h */ = {isa = PBXBuildFile; fileRef = 1743FC064CA3490A81988667 /* /Users/ip/Documents/cs471/lab3/lab03/src/Program.h */; };
+		237C5C88F2F6483EBD7CCC39 /* /Users/ip/Documents/cs471/lab3/lab03/resources/simple_vert33.glsl */ = {isa = PBXBuildFile; fileRef = 0FAF1AF6EA54470CB7F315E4 /* /Users/ip/Documents/cs471/lab3/lab03/resources/simple_vert33.glsl */; };
+		460AE31A82A046EFB09DDDA7 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/include/glad/glad.h */ = {isa = PBXBuildFile; fileRef = 39EAFAA8BA774890A13AC249 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/include/glad/glad.h */; };
+		5F4DA16005C740268DFC65F0 /* /Users/ip/Documents/cs471/lab3/lab03/src/WindowManager.cpp */ = {isa = PBXBuildFile; fileRef = 8A61110CA9F345338310E324 /* /Users/ip/Documents/cs471/lab3/lab03/src/WindowManager.cpp */; };
+		7631F4370D0443D89A19B424 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/include/KHR/khrplatform.h */ = {isa = PBXBuildFile; fileRef = 648C0F3C92BF4C4BB98DA1B3 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/include/KHR/khrplatform.h */; };
+		83F91150D2694170BB2AF494 /* /Users/ip/Documents/cs471/lab3/lab03/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F6E2050D010046828BC3A59C /* /Users/ip/Documents/cs471/lab3/lab03/CMakeLists.txt */; };
+		9A10996F5A624DDAAA94B001 /* /Users/ip/Documents/cs471/lab3/lab03/src/Program.cpp */ = {isa = PBXBuildFile; fileRef = 8A77752019C141E389F9E8AB /* /Users/ip/Documents/cs471/lab3/lab03/src/Program.cpp */; };
+		D36EBB1ECBBE46DEA83F538F /* /Users/ip/Documents/cs471/lab3/lab03/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 206C64F490CB44A898204172 /* /Users/ip/Documents/cs471/lab3/lab03/src/main.cpp */; };
+		D76244F53A2C4B52AC5BE7B0 /* /Users/ip/Documents/cs471/lab3/lab03/src/MatrixStack.cpp */ = {isa = PBXBuildFile; fileRef = 284286A5D5C74DB38ED38485 /* /Users/ip/Documents/cs471/lab3/lab03/src/MatrixStack.cpp */; };
+		E1675B9009AD437A99FFB0DD /* /Users/ip/Documents/cs471/lab3/lab03/src/WindowManager.h */ = {isa = PBXBuildFile; fileRef = 1306B9F0B373413E930F717C /* /Users/ip/Documents/cs471/lab3/lab03/src/WindowManager.h */; };
+		F7BEB7D2F8C3436FB88203A0 /* /Users/ip/Documents/cs471/lab3/lab03/src/MatrixStack.h */ = {isa = PBXBuildFile; fileRef = 65317007471A4F0A841F2FFD /* /Users/ip/Documents/cs471/lab3/lab03/src/MatrixStack.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		319471FF319E467FA4C7B6EC /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		C51D09E435A04096B3ED8ABB /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		C8ABE0090EC04B81BC25A558 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		DB2877DCD6604EA78FEEC2ED /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		04B6ACE71535435CB2A7A57B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1467C4AE3F9040CE907508E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20839300EA364FD28F538178;
+			remoteInfo = lab3;
+		};
+		BD91A71D263B42939D226346 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1467C4AE3F9040CE907508E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABD0B7004CA44197A37A473A;
+			remoteInfo = ZERO_CHECK;
+		};
+		EC483B40300241ACBCD1CE26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1467C4AE3F9040CE907508E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABD0B7004CA44197A37A473A;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FAF1AF6EA54470CB7F315E4 /* /Users/ip/Documents/cs471/lab3/lab03/resources/simple_vert33.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = simple_vert33.glsl; path = resources/simple_vert33.glsl; sourceTree = SOURCE_ROOT; };
+		1306B9F0B373413E930F717C /* /Users/ip/Documents/cs471/lab3/lab03/src/WindowManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = WindowManager.h; path = src/WindowManager.h; sourceTree = SOURCE_ROOT; };
+		1743FC064CA3490A81988667 /* /Users/ip/Documents/cs471/lab3/lab03/src/Program.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Program.h; path = src/Program.h; sourceTree = SOURCE_ROOT; };
+		1A1EC3369A424778B2C764A2 /* /Users/ip/Documents/cs471/lab3/lab03/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		206C64F490CB44A898204172 /* /Users/ip/Documents/cs471/lab3/lab03/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		284286A5D5C74DB38ED38485 /* /Users/ip/Documents/cs471/lab3/lab03/src/MatrixStack.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MatrixStack.cpp; path = src/MatrixStack.cpp; sourceTree = SOURCE_ROOT; };
+		39EAFAA8BA774890A13AC249 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/include/glad/glad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glad.h; path = ext/glad/include/glad/glad.h; sourceTree = SOURCE_ROOT; };
+		648C0F3C92BF4C4BB98DA1B3 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/include/KHR/khrplatform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = khrplatform.h; path = ext/glad/include/KHR/khrplatform.h; sourceTree = SOURCE_ROOT; };
+		65317007471A4F0A841F2FFD /* /Users/ip/Documents/cs471/lab3/lab03/src/MatrixStack.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MatrixStack.h; path = src/MatrixStack.h; sourceTree = SOURCE_ROOT; };
+		8A61110CA9F345338310E324 /* /Users/ip/Documents/cs471/lab3/lab03/src/WindowManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = WindowManager.cpp; path = src/WindowManager.cpp; sourceTree = SOURCE_ROOT; };
+		8A77752019C141E389F9E8AB /* /Users/ip/Documents/cs471/lab3/lab03/src/Program.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Program.cpp; path = src/Program.cpp; sourceTree = SOURCE_ROOT; };
+		9F7F39AB2CA040AC980C1E5F /* /Users/ip/Documents/cs471/lab3/lab03/src/GLSL.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GLSL.h; path = src/GLSL.h; sourceTree = SOURCE_ROOT; };
+		A30C80269F264689BB887E56 /* /Users/ip/Documents/cs471/lab3/lab03/resources/simple_frag33.glsl */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = simple_frag33.glsl; path = resources/simple_frag33.glsl; sourceTree = SOURCE_ROOT; };
+		B2A3DC09B9814428ADA1C578 /* lab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = lab3; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB2BAB42BCC445CB494383B /* /Users/ip/Documents/cs471/lab3/lab03/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DA3F569055384F09A10EFC98 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/src/glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = ext/glad/src/glad.c; sourceTree = SOURCE_ROOT; };
+		F6E2050D010046828BC3A59C /* /Users/ip/Documents/cs471/lab3/lab03/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FD1B16FF1047438497578174 /* /Users/ip/Documents/cs471/lab3/lab03/src/GLSL.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GLSL.cpp; path = src/GLSL.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		142DE7AF408647D4AF6BC21F /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				A5DE280593C044DE9B5D3A50 /* CMake Rules */,
+				1A1EC3369A424778B2C764A2 /* /Users/ip/Documents/cs471/lab3/lab03/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		27089A9AE6524D9FA602DB84 = {
+			isa = PBXGroup;
+			children = (
+				E213A1313ED8477BBFD5EB41 /* lab3 */,
+				142DE7AF408647D4AF6BC21F /* ALL_BUILD */,
+				CFD0B0F60F7C4CEB98DDB156 /* ZERO_CHECK */,
+				BF31E14BF2C54AAD9C741626 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6268678E9EB549FC8DA0E694 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA3F569055384F09A10EFC98 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/src/glad.c */,
+				FD1B16FF1047438497578174 /* /Users/ip/Documents/cs471/lab3/lab03/src/GLSL.cpp */,
+				284286A5D5C74DB38ED38485 /* /Users/ip/Documents/cs471/lab3/lab03/src/MatrixStack.cpp */,
+				8A77752019C141E389F9E8AB /* /Users/ip/Documents/cs471/lab3/lab03/src/Program.cpp */,
+				8A61110CA9F345338310E324 /* /Users/ip/Documents/cs471/lab3/lab03/src/WindowManager.cpp */,
+				206C64F490CB44A898204172 /* /Users/ip/Documents/cs471/lab3/lab03/src/main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		6BAA4C57815F474AA03E8084 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				648C0F3C92BF4C4BB98DA1B3 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/include/KHR/khrplatform.h */,
+				39EAFAA8BA774890A13AC249 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/include/glad/glad.h */,
+				9F7F39AB2CA040AC980C1E5F /* /Users/ip/Documents/cs471/lab3/lab03/src/GLSL.h */,
+				65317007471A4F0A841F2FFD /* /Users/ip/Documents/cs471/lab3/lab03/src/MatrixStack.h */,
+				1743FC064CA3490A81988667 /* /Users/ip/Documents/cs471/lab3/lab03/src/Program.h */,
+				1306B9F0B373413E930F717C /* /Users/ip/Documents/cs471/lab3/lab03/src/WindowManager.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		A136275E4B544464B9F4AD3E /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		A5DE280593C044DE9B5D3A50 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		BF31E14BF2C54AAD9C741626 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3DC09B9814428ADA1C578 /* lab3 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFD0B0F60F7C4CEB98DDB156 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				A136275E4B544464B9F4AD3E /* CMake Rules */,
+				BFB2BAB42BCC445CB494383B /* /Users/ip/Documents/cs471/lab3/lab03/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		E213A1313ED8477BBFD5EB41 /* lab3 */ = {
+			isa = PBXGroup;
+			children = (
+				6268678E9EB549FC8DA0E694 /* Source Files */,
+				6BAA4C57815F474AA03E8084 /* Header Files */,
+				F6E2050D010046828BC3A59C /* /Users/ip/Documents/cs471/lab3/lab03/CMakeLists.txt */,
+				A30C80269F264689BB887E56 /* /Users/ip/Documents/cs471/lab3/lab03/resources/simple_frag33.glsl */,
+				0FAF1AF6EA54470CB7F315E4 /* /Users/ip/Documents/cs471/lab3/lab03/resources/simple_vert33.glsl */,
+			);
+			name = lab3;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20839300EA364FD28F538178 /* lab3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32608E9B1854BE9846D5933 /* Build configuration list for PBXNativeTarget "lab3" */;
+			buildPhases = (
+				EBC0B5F23C154CB2A6984672 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C36E10C42EF4CF788ED18B4 /* PBXTargetDependency */,
+			);
+			name = lab3;
+			productName = lab3;
+			productReference = B2A3DC09B9814428ADA1C578 /* lab3 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1467C4AE3F9040CE907508E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0920;
+			};
+			buildConfigurationList = 7495CCF4C0E34194A9C1AFF1 /* Build configuration list for PBXProject "lab3" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				319471FF319E467FA4C7B6EC /* Debug */,
+				C8ABE0090EC04B81BC25A558 /* Release */,
+				C51D09E435A04096B3ED8ABB /* MinSizeRel */,
+				DB2877DCD6604EA78FEEC2ED /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 27089A9AE6524D9FA602DB84;
+			projectDirPath = .;
+			projectRoot = "";
+			targets = (
+				7937DB6F09154B64B763731A /* ALL_BUILD */,
+				ABD0B7004CA44197A37A473A /* ZERO_CHECK */,
+				20839300EA364FD28F538178 /* lab3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D3917FC984647A2B72E2504 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		729904FA51E34896B7AEAE30 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/ip/Documents/cs471/lab3/lab03 -f /Users/ip/Documents/cs471/lab3/lab03/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		851C5FE3DBB5476CAD6F0A30 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		EC59BD589DA34105B70A6784 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/ip/Documents/cs471/lab3/lab03 -f /Users/ip/Documents/cs471/lab3/lab03/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBC0B5F23C154CB2A6984672 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E3645B261544682BF3C4683 /* /Users/ip/Documents/cs471/lab3/lab03/ext/glad/src/glad.c */,
+				125EC4B8381E44F8852B740C /* /Users/ip/Documents/cs471/lab3/lab03/src/GLSL.cpp */,
+				D76244F53A2C4B52AC5BE7B0 /* /Users/ip/Documents/cs471/lab3/lab03/src/MatrixStack.cpp */,
+				9A10996F5A624DDAAA94B001 /* /Users/ip/Documents/cs471/lab3/lab03/src/Program.cpp */,
+				5F4DA16005C740268DFC65F0 /* /Users/ip/Documents/cs471/lab3/lab03/src/WindowManager.cpp */,
+				D36EBB1ECBBE46DEA83F538F /* /Users/ip/Documents/cs471/lab3/lab03/src/main.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C36E10C42EF4CF788ED18B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABD0B7004CA44197A37A473A /* ZERO_CHECK */;
+			targetProxy = EC483B40300241ACBCD1CE26 /* PBXContainerItemProxy */;
+		};
+		643A5CEB65FC4F2DADCAD650 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABD0B7004CA44197A37A473A /* ZERO_CHECK */;
+			targetProxy = BD91A71D263B42939D226346 /* PBXContainerItemProxy */;
+		};
+		96131005412141A19A901AC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20839300EA364FD28F538178 /* lab3 */;
+			targetProxy = 04B6ACE71535435CB2A7A57B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2E43FC2535D74AECB0B6D0DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		569858E42112461AAD4C34FC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		59E7B2B6CF494CF48F41F6F9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLFW_DLL);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic        -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libglfw.3.2.dylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = lab3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		639AA1DD609E46E39EDE94CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		68243F6F550C4091A76BB680 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03/build;
+			};
+			name = Release;
+		};
+		6A6F73B8B8B24EC2AA882A56 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLFW_DLL);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic     -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libglfw.3.2.dylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = lab3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		892A7917BBE94349B99013E7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03/build;
+			};
+			name = MinSizeRel;
+		};
+		8B14A46A7CD842BF8C703D64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03/build;
+			};
+			name = Debug;
+		};
+		A3A1ABD4D24F4049A471CB3F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		AC3FB66B72314CFEBBB7D726 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03/build;
+			};
+			name = RelWithDebInfo;
+		};
+		B5B7C981341842E98A1FA198 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B938A2AC87B547E0A7C3AAD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLFW_DLL);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic     -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libglfw.3.2.dylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = lab3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		C5097D814AFE4E6BB3504442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLFW_DLL);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic     ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libglfw.3.2.dylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = lab3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		CBD05F6909344FA9A1342360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DB1F19D70B4F4797BF4BF3B8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F23C5AF9242E431FB068BB6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/ip/Documents/cs471/lab3/lab03/ext/glad/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/ip/Documents/cs471/lab3/lab03;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3469608CEB3A4C2C8DA6F782 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E43FC2535D74AECB0B6D0DB /* Debug */,
+				CBD05F6909344FA9A1342360 /* Release */,
+				A3A1ABD4D24F4049A471CB3F /* MinSizeRel */,
+				DB1F19D70B4F4797BF4BF3B8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7495CCF4C0E34194A9C1AFF1 /* Build configuration list for PBXProject "lab3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B14A46A7CD842BF8C703D64 /* Debug */,
+				68243F6F550C4091A76BB680 /* Release */,
+				892A7917BBE94349B99013E7 /* MinSizeRel */,
+				AC3FB66B72314CFEBBB7D726 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B32608E9B1854BE9846D5933 /* Build configuration list for PBXNativeTarget "lab3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5097D814AFE4E6BB3504442 /* Debug */,
+				B938A2AC87B547E0A7C3AAD5 /* Release */,
+				6A6F73B8B8B24EC2AA882A56 /* MinSizeRel */,
+				59E7B2B6CF494CF48F41F6F9 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DAA6DAED73E54677A068FBB1 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F23C5AF9242E431FB068BB6C /* Debug */,
+				639AA1DD609E46E39EDE94CD /* Release */,
+				569858E42112461AAD4C34FC /* MinSizeRel */,
+				B5B7C981341842E98A1FA198 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1467C4AE3F9040CE907508E7 /* Project object */;
+}
