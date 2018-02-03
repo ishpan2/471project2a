@@ -11,11 +11,11 @@ void main()
     float cy = WINDOWHEIGHT/2;
     if (distance(gl_FragCoord.xy, vec2(WINDOWWIDTH/2, WINDOWHEIGHT/2))<rad){
         float factor = distance(gl_FragCoord.xy, vec2(WINDOWWIDTH/2, WINDOWHEIGHT/2)) / 40;
-        color = vec3(1.0f, 1.0f, 0.0f);
+        color = vec3(1.0f, 1.0f, factor*0.3);
         
     }
     else{
         float fac = distance(gl_FragCoord.xy, vec2(WINDOWWIDTH/2, WINDOWHEIGHT/2)) / distance(vec2(WINDOWWIDTH/2, WINDOWHEIGHT/2), vec2(WINDOWWIDTH, WINDOWHEIGHT));
-        color = vec3(1.0f, 0.8f, 0.4f);
+        color = vec3(1, 0.8, 2*fac);
     }
 }
