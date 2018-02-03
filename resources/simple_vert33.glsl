@@ -8,25 +8,15 @@ out vec3 fragmentColor;
 
 void main()
 {
-	
-    fragmentColor = vertexColor;
-    vec3 Hello = vertPos;
-    if (gl_VertexID % 3 == 1){
+    vec3 nePos = vertPos;
+    if (gl_VertexID % 3 == 1 || gl_VertexID % 3 == 0){
         if(gl_VertexID % 2 == 1){
-            Hello = Hello * (.7 * abs(sin(time)) + .2);
+            nePos = nePos * (.5 * abs(sin(time)) + .4);
         }
         else{
-            Hello = Hello * (.7 * abs(cos(time)) + .2);
-        }
-    }
-    else if(gl_VertexID % 3 == 0){
-        if(gl_VertexID % 2 == 1){
-            Hello = Hello * (.7 * abs(sin(time)) + .2);
-        }
-        else{
-            Hello = Hello * (.7 * abs(cos(time)) + .2);
+            nePos = nePos * (.5 * abs(cos(time)) + .24;
         }
     }
     fragmentColor = vertexColor;
-    gl_Position = P * MV * vec4(Hello, 1.0);
+    gl_Position = P * MV * vec4(nePos, 1.0);
 }
